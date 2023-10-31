@@ -1,51 +1,69 @@
-import { defineConfig } from 'vite';
+// vite.config.ts
+
+import { resolve } from 'node:path';
 import { VitePWA } from 'vite-plugin-pwa';
+import { sveltekit } from '@sveltejs/kit/vite';
+
+import autoImport from 'sveltekit-autoimport';
 import { svelte } from '@sveltejs/vite-plugin-svelte';
+import UnoCSS from 'unocss/vite';
+import transformerDirectives from '@unocss/transformer-directives';
+
+import { type ConfigEnv, type UserConfig, loadEnv } from 'vite';
+// element按需引入
+const pathResolve = (dir: string) => {
+  return resolve(process.cwd(), '.', dir);
+};
 
 // https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [
-    svelte(),
-    VitePWA({
-      registerType: 'prompt',
-      devOptions: {
-        enabled: true,
+export default function ({ command, mode }: ConfigEnv): UserConfig {
+  const isProduction = command === 'build';
+  const root = process.cwd();
+  const env = loadEnv(mode, root);
+
+  return {
+    root,
+    server: {
+      host: true,
+      hmr: true,
+    },
+    plugins: [
+      svelte(),
+      sveltekit(),
+      autoImport({
+        components: ['./src/components'],
+      }),
+      UnoCSS({
+        configFile: 'uno.config.ts',
+      }),
+      VitePWA({
+        registerType: 'prompt',
+        devOptions: {
+          enabled: true,
+        },
+        workbox: {
+          globPatterns: ['**/*.{js,css,html,ico,png,svg}'],
+        },
+      }),
+    ],
+    build: {
+      minify: 'terser',
+      terserOptions: {
+        compress: {
+          //生产环境时移除console
+          drop_console: true,
+          drop_debugger: true,
+        },
       },
-      workbox: {
-        globPatterns: ['**/*.{js,css,html,ico,png,svg}'],
+      target: 'esnext',
+    },
+    css: {
+      preprocessorOptions: {
+        scss: {
+          // 配置 nutui 全局 scss 变量
+          additionalData: ``,
+        },
       },
-      manifest: {
-        name: 'PD3 Vault Cracker',
-        short_name: 'PD3 Vault Cracker',
-        description: 'A tool to generate vault combinations for Payday 3',
-        theme_color: '#2b2a33',
-        background_color: '#1c1b22',
-        icons: [
-          {
-            src: 'pwa-64x64.png',
-            sizes: '64x64',
-            type: 'image/png',
-          },
-          {
-            src: 'pwa-192x192.png',
-            sizes: '192x192',
-            type: 'image/png',
-          },
-          {
-            src: 'pwa-512x512.png',
-            sizes: '512x512',
-            type: 'image/png',
-            purpose: 'any',
-          },
-          {
-            src: 'maskable-icon-512x512.png',
-            sizes: '512x512',
-            type: 'image/png',
-            purpose: 'maskable',
-          },
-        ],
-      },
-    }),
-  ],
-  base: '/pd3-vault-cracker/',
-});
+    },
+  };
+}

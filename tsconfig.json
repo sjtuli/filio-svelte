@@ -1,5 +1,5 @@
 {
-  "extends": "@tsconfig/svelte/tsconfig.json",
+	"extends": "./.svelte-kit/tsconfig.json",
   "compilerOptions": {
     "target": "ESNext",
     "useDefineForClassFields": true,
@@ -14,6 +14,11 @@
     "allowJs": true,
     "checkJs": true,
     "isolatedModules": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"skipLibCheck": true,
+		"sourceMap": true,
+		"strict": true,
     "types": [
       "vitest/globals",
       "./src/types/app.d.ts"
@@ -23,7 +28,8 @@
     "src/**/*.d.ts",
     "src/**/*.ts",
     "src/**/*.js",
-    "src/**/*.svelte",
+    "src/**/*.svelte", 
+    "src/constants.ts",
   ],
   "references": [
     {

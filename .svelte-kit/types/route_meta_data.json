@@ -1,0 +1,29 @@
+{
+	"/": [],
+	"/abouts": [],
+	"/abouts/[about_id=integer]": [],
+	"/api/comments": [
+		"src/routes/api/comments/+server.ts"
+	],
+	"/api/comments/[commentId]": [
+		"src/routes/api/comments/[commentId]/+server.ts"
+	],
+	"/auth": [
+		"src/routes/auth/+server.js"
+	],
+	"/demo-api": [
+		"src/routes/demo-api/+server.ts"
+	],
+	"/home": [],
+	"/products": [
+		"src/routes/products/+page.server.ts"
+	],
+	"/products/[productId]": [
+		"src/routes/products/[productId]/+page.server.ts"
+	],
+	"/stocks": [
+		"src/routes/stocks/+page.ts",
+		"src/routes/stocks/+layout.ts",
+		"src/routes/stocks/+layout.ts"
+	]
+}

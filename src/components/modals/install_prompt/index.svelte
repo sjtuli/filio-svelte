@@ -45,5 +45,3 @@
     </div>
   </article>
 </dialog>
-
-<style src="./style.scss"></style>
