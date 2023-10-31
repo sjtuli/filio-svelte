@@ -1,21 +1,41 @@
+# filio-svelte
 
-![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/SavageCore/pd3-vault-cracker/release.yml?style=for-the-badge) ![Codecov](https://img.shields.io/codecov/c/github/SavageCore/pd3-vault-cracker?style=for-the-badge) ![GitHub](https://img.shields.io/github/license/SavageCore/pd3-vault-cracker?style=for-the-badge)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-# PD3 Vault Cracker
+[Live Demo](https://www.ayushsingh.co.in)
 
-A tool to help you crack the vault in Payday 3. Enter your 2-4 digit code and it will tell you the possible combinations. Go get those no mask runs!
+The origin program is [here](https://github.com/ayush013/folio.git), which is powered by React and presents a wonderful UI/UX. 
 
-Click [here](https://savagecore.github.io/pd3-vault-cracker/) to view it.
+This project is its SvelteKit version.
+All of there are almost the best practices.
+>初始的项目在这里, 是用React驱动的. 本项目是其SvelteKit版本
 
-Inspired by [this](https://www.reddit.com/r/paydaytheheist/comments/15jvvpq/payday_3_beta_vault_code_generator_from/) Reddit post.
+if it helps you, you can star me.
+> 如果对你有帮助送我一颗珍贵的小星星（づ￣ 3 ￣）づ ╭❤ 
 
-## Development
+## How to run on local?  如何运行?
 
-1. Clone the repo
-2. Run `npm install`
-3. Run `npm run start` to start the development server
-4. Visit `http://localhost:3000` in your browser
+First, run the development server: 
+>首先安装该安装的package
+```bash
+npm install
+# or
+yarn
+```
+Second, run the development server: 
+>第二步, 运行
 
-## Publishing
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-1. Push a tag to the repo
+## How to reconstruct?  如何重构?
+|React | Vue| svelte
+|:-:|-|-|
+|useRef | ref| let(variables)/bind:this(components)|
+|useEffect | onMounted/onUnmounted| onMount/onDestroy|
+| {} | v-bind| {} |
+| jsx parameter| defineProps | export |
+|MutableRefObject|Ref<HeepElement>| HTTPElement|
