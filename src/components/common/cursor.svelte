@@ -46,8 +46,8 @@
   };
 
   const initCursorAnimation = () => {
-    follower.classList.add('block');
-    cursor.classList.add('block');
+    follower.classList.remove('hidden_cursor');
+    cursor.classList.remove('hidden_cursor');
     document.addEventListener('mousemove', moveCircle);
     document.querySelectorAll('.link').forEach((el) => {
       el.addEventListener('mouseenter', onHover);
@@ -62,8 +62,8 @@
   });
 </script>
 
-<div bind:this="{cursor}" class="cursor"></div>
-<div bind:this="{follower}" class="flower"></div>
+<div bind:this="{cursor}" class="cursor hidden_cursor"></div>
+<div bind:this="{follower}" class="flower hidden_cursor"></div>
 
 <style scoped>
   .cursor {
@@ -79,5 +79,8 @@
     will-change: transform;
     border-radius: 100%;
     background: rgba(255, 255, 255, 0.2);
+  }
+  .hidden_cursor {
+    @apply hidden;
   }
 </style>

@@ -14,7 +14,6 @@
 	"/demo-api": [
 		"src/routes/demo-api/+server.ts"
 	],
-	"/home": [],
 	"/products": [
 		"src/routes/products/+page.server.ts"
 	],

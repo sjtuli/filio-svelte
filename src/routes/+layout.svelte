@@ -81,6 +81,7 @@
 <style>
   @import '../styles/globals.scss';
   main {
+    /* background-image: url('/bg.png'); */
     font-family: 'Google Sans', Avenir, ui-sans-serif, 'system-ui',
       '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto',
       '"Helvetica Neue"', 'Arial', '"Noto Sans"', sans-serif,

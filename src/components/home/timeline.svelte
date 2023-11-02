@@ -17,7 +17,6 @@
   const svgColor = '#9CA3AF';
   const animColor = '#FCD34D';
   const separation = 450;
-  let strokeWidth = 2;
   const leftBranchX = 13;
   const curveLength = 150;
   const dotSize = 26;
@@ -388,7 +387,7 @@
   let rightBranchX = 109;
   const svgCheckpointItems = TIMELINE.filter(
     (item) => item.type === NodeTypes.CHECKPOINT && item.shouldDrawLine,
-  );
+  ) as CheckpointNode[];
   const svgLength = svgCheckpointItems?.length * separation;
   let timelineSvg: SVGSVGElement;
   let svgContainer: HTMLDivElement;
@@ -454,7 +453,6 @@
                 }`}"
                 src="{item.slideImage || ''}"
                 alt="Timeline"
-                layout="fill"
               />
             {/each}
           </div>
@@ -464,12 +462,15 @@
   </div>
 </section>
 
-<style>
+<style scoped>
   .str,
   .dot {
     stroke-width: var(strokeWidth) px;
   }
   .anim-branch {
     stroke-dasharray: 186;
+  }
+  img {
+    layout: cover;
   }
 </style>

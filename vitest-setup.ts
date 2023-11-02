@@ -1,6 +1,6 @@
 import { vi } from 'vitest';
 import '@testing-library/jest-dom/vitest';
-import './src/lib/i18n.js';
+import '$/lib/i18n';
 
 // https://github.com/vitest-dev/vitest/issues/821#issuecomment-1046954558
 Object.defineProperty(window, 'matchMedia', {

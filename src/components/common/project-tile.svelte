@@ -1,7 +1,6 @@
 <script lang="ts">
   import VanillaTilt from 'vanilla-tilt';
   import type { IProject } from '$lib/constants';
-  import styles from './ProjectTile.module.scss';
   import { onMount } from 'svelte';
 
   let projectCard: HTMLDivElement;
@@ -44,11 +43,10 @@
   target="_blank"
   rel="noreferrer"
   class="link overflow-hidden rounded-3xl snap-start"
-  style="
-    maxWidth: animationEnabled ? 'calc(100vw - 2rem)' : 'calc(100vw - 4rem)',
+  style="{`maxWidth: ${animationEnabled} ? 'calc(100vw - 2rem)' : 'calc(100vw - 4rem)',
     flex: '1 0 auto',
     WebkitMaskImage: '-webkit-radial-gradient(white, black)',
-  "
+`}"
 >
   <div
     bind:this="{projectCard}"
@@ -58,15 +56,12 @@
     <img
       src="/project-bg.svg"
       alt="Project"
-      layout="fill"
       class="absolute w-full h-full top-0 left-0 opacity-20"
     />
     <img
       placeholder="blur"
-      blurDataURL="{blurImage}"
       src="{image}"
       alt="{name}"
-      layout="fill"
       class="ProjectImg z-0"
     />
     <div
@@ -93,7 +88,6 @@
               src="{getImg(atech)}"
               alt="{atech}"
               height="{45}"
-              objectFit="contain"
               width="{45}"
             />
           </div>
@@ -109,7 +103,7 @@
   </div>
 </a>
 
-<style lang="scss">
+<style>
   .ml-16 {
     @apply ml-16;
   }
@@ -124,12 +118,11 @@
     @media (min-width: 768px) {
       height: 26rem;
     }
-
-    img {
-      object-fit: cover;
-    }
   }
 
+  .ProjectTile img {
+    object-fit: cover;
+  }
   .ProjectImg {
     @apply absolute top-0 rounded-xl shadow-xl;
     right: 2rem !important;

@@ -1,4 +1,5 @@
 <script lang="ts">
+  import './hero-image-scss.scss';
 </script>
 
 <svg
@@ -2511,7 +2512,3 @@
     </filter>
   </defs>
 </svg>
-
-<style lang="scss">
-  @import './hero-image-scss.scss'; // 引入外部 CSS 文件
-</style>
