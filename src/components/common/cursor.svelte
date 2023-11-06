@@ -1,4 +1,4 @@
-<script lang="ts" module>
+<script lang="ts">
   import { gsap, Linear } from 'gsap';
   import { onMount } from 'svelte';
   import { isSmallScreen } from '../../routes/store';

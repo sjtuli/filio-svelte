@@ -25,9 +25,9 @@
   "devDependencies": {
     "@picocss/pico": "^1.5.10",
     "@rollup/plugin-alias": "^5.0.1",
+    "@sveltejs/adapter-auto": "^2.0.0",
     "@sveltejs/kit": "^1.26.0",
     "@sveltejs/package": "^2.2.2",
-    "@sveltejs/adapter-auto": "^2.0.0",
     "@sveltejs/vite-plugin-svelte": "^2.4.6",
     "@testing-library/jest-dom": "^6.1.4",
     "@testing-library/svelte": "^4.0.4",
@@ -35,9 +35,9 @@
     "@typescript-eslint/eslint-plugin": "^6.8.0",
     "@typescript-eslint/parser": "^6.0.0",
     "@unocss/core": "latest",
-    "@unocss/preset-icons": "latest",
     "@unocss/eslint-config": "^0.56.4",
     "@unocss/extractor-pug": "^0.56.4",
+    "@unocss/preset-icons": "latest",
     "@unocss/preset-uno": "^0.56.4",
     "@unocss/svelte-scoped": "^0.57.1",
     "@unocss/transformer-directives": "^0.57.1",
@@ -81,10 +81,10 @@
     "vite-plugin-svg-icons": "^2.0.1"
   },
   "dependencies": {
+    "@antfu/eslint-config": "^1.1.0",
     "@babel/core": "^7.23.2",
     "@babel/preset-env": "^7.23.2",
     "@sveltejs/kit": "^1.26.0",
-    "@sxzz/eslint-config": "^3.7.0",
     "@types/cookie": "^0.5.3",
     "@vitejs/plugin-vue-jsx": "^3.0.2",
     "cookie": "^0.5.0",

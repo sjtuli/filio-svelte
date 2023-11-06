@@ -7,10 +7,7 @@ import { type ConfigEnv, type UserConfig, loadEnv } from 'vite';
 
 // https://vitejs.dev/config/
 export default function ({ command, mode }: ConfigEnv): UserConfig {
-  const root = process.cwd();
-
   return {
-    root,
     server: {
       host: true,
       hmr: true,

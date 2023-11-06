@@ -5,7 +5,6 @@
   import Modal from '../components/modals/install_prompt/index.svelte';
 
   let isModalOpen = false;
-  // eslint-disable-next-line no-undef
   let deferredPrompt: BeforeInstallPromptEvent | undefined;
 
   const showInstallPrompt = () => {
@@ -55,7 +54,6 @@
         return;
       }
       // Store the event for later use
-      // eslint-disable-next-line no-undef
       deferredPrompt = event as BeforeInstallPromptEvent;
       showInstallPrompt();
     });
