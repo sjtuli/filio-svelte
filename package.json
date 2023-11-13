@@ -82,7 +82,7 @@
   },
   "dependencies": {
     "@antfu/eslint-config": "^1.1.0",
-    "@babel/core": "^7.23.2",
+    "@babel/core": "^7.23.3",
     "@babel/preset-env": "^7.23.2",
     "@sveltejs/kit": "^1.26.0",
     "@types/cookie": "^0.5.3",
