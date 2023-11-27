@@ -2145,6 +2145,14 @@
     "@unocss/core" "0.57.1"
     unconfig "^0.3.11"
 
+"@unocss/config@0.57.7":
+  version "0.57.7"
+  resolved "https://registry.yarnpkg.com/@unocss/config/-/config-0.57.7.tgz#e31c3514759d21610e7c901e52d521b87cf3024e"
+  integrity sha512-UG8G9orWEdk/vyDvGUToXYn/RZy/Qjpx66pLsaf5wQK37hkYsBoReAU5v8Ia/6PL1ueJlkcNXLaNpN6/yVoJvg==
+  dependencies:
+    "@unocss/core" "0.57.7"
+    unconfig "^0.3.11"
+
 "@unocss/core@0.56.5", "@unocss/core@^0.56.5":
   version "0.56.5"
   resolved "https://registry.npmjs.org/@unocss/core/-/core-0.56.5.tgz"
@@ -2154,6 +2162,11 @@
   version "0.57.1"
   resolved "https://registry.npmjs.org/@unocss/core/-/core-0.57.1.tgz#413bb5dc5546e3b943a67d1040567c2c90bb4120"
   integrity sha512-cqQW/4gCuk+bFMPg9lBanuRNQ9Lx1l4PpMN/6uKxI5WROpq7ce/Xb4uGvAxKLh3ITtFSpXs2cLfsy7QD6cVD/Q==
+
+"@unocss/core@0.57.7":
+  version "0.57.7"
+  resolved "https://registry.yarnpkg.com/@unocss/core/-/core-0.57.7.tgz#4fe79e3d7327d5f25de0f82b80567fd8f5f82602"
+  integrity sha512-1d36M0CV3yC80J0pqOa5rH1BX6g2iZdtKmIb3oSBN4AWnMCSrrJEPBrUikyMq2TEQTrYWJIVDzv5A9hBUat3TA==
 
 "@unocss/eslint-config@^0.56.4":
   version "0.56.5"
@@ -2314,6 +2327,11 @@
   resolved "https://registry.npmjs.org/@unocss/reset/-/reset-0.57.1.tgz#9890248f00fd810d32888f35ce6ccd6189589d64"
   integrity sha512-f/ofoudjFN/HMtv1XV5phP58pOmNruBhr0GbVdBNylyieMQkFHowA7iSemChnC/fTbCcY6oSOAcFl4n9AefjdA==
 
+"@unocss/reset@0.57.7":
+  version "0.57.7"
+  resolved "https://registry.yarnpkg.com/@unocss/reset/-/reset-0.57.7.tgz#e5a09fa9289a47db2f5b030cfc547ea641ad298c"
+  integrity sha512-oN9024WVrMewGbornnAPIpzHeKPIfVmZ5IsZGilWR761TnI5jTjHUkswsVoFx7tZdpCN2/bqS3JK/Ah0aot3NQ==
+
 "@unocss/rule-utils@0.56.5":
   version "0.56.5"
   resolved "https://registry.npmjs.org/@unocss/rule-utils/-/rule-utils-0.56.5.tgz"
@@ -2334,13 +2352,13 @@
   resolved "https://registry.npmjs.org/@unocss/scope/-/scope-0.57.1.tgz#e75ea9cb90daf9bea510e80631f874f399030127"
   integrity sha512-ZAzg6lLGwKNQGCvJXEie3TvGztkAyajEFqygu0mjtHb+CmDql4iAjoygs+3dnRI5hSDwfMYFrJ2azX26+2CsoA==
 
-"@unocss/svelte-scoped@^0.57.1":
-  version "0.57.1"
-  resolved "https://registry.npmjs.org/@unocss/svelte-scoped/-/svelte-scoped-0.57.1.tgz#98fd9077ad4decc5d809177b31d37ef9da76cb05"
-  integrity sha512-FqjOmSwBsMOrlZOomR6MxqUVNCOBnxqgfAEvaQ5uBQHWXC0g2SXfpVPRu15UL2NiVPIuG/vLq9wgcxtk91yubg==
+"@unocss/svelte-scoped@^0.57.7":
+  version "0.57.7"
+  resolved "https://registry.yarnpkg.com/@unocss/svelte-scoped/-/svelte-scoped-0.57.7.tgz#168f97a9cade501758b047e4d6da4379cdd7ec2d"
+  integrity sha512-zomdzHjuurp7IfN5T01l7I0LIFRczepjgnNkL4ETOUCQxQ/14s7Obt9PtP2zTj/GQ/BXmjoO9PaozOkhlC4wYw==
   dependencies:
-    "@unocss/config" "0.57.1"
-    "@unocss/reset" "0.57.1"
+    "@unocss/config" "0.57.7"
+    "@unocss/reset" "0.57.7"
     css-tree "^2.3.1"
     magic-string "^0.30.5"
 
